@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "daisyui";
+body {
+  background-color: rgb(252, 194, 215);
+  color: white; /* Adjust text color for contrast */
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
