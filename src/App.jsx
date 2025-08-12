@@ -9,7 +9,6 @@ import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Experiences from "./components/Experiences";
 import Footer from "./components/Footer";
 
 function App() {
@@ -26,7 +25,6 @@ function App() {
       <Hero />
       <AboutMe />
       <Skills />
-      <Experiences />
       <Education />
       <Projects />
       <Contact />
