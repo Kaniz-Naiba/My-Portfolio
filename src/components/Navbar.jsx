@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 shadow-lg rounded-3xl z-50 text-white">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 className="text-xl font-bold">Naiba</h1>
+        
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 font-medium items-center">
@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* Resume Button */}
         <div className="hidden md:block">
           <a
-            href="/Kaniz-Naiba-Resume.pdf"
+            href="/Tanbina Kaniz Naiba -Web Developer.pdf"
             download
             className="bg-white text-[rgb(185,56,99)] px-4 py-2 rounded hover:bg-pink-300 transition duration-300 font-semibold"
           >
@@ -79,7 +79,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="/Kaniz-Naiba-Resume.pdf"
+            href="/Tanbina Kaniz Naiba -Web Developer.pdf"
             download
             className="inline-block mt-2 bg-white text-[rgb(185,56,99)] px-4 py-2 rounded hover:bg-pink-300 transition duration-300 font-semibold"
           >

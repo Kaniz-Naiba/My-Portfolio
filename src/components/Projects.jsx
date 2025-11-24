@@ -4,6 +4,17 @@ import { FaGithub } from "react-icons/fa";
 
 const projectsData = [
   {
+  title: "Pawfect Match",
+  description: `A smart and secure pet adoption platform connecting adopters, shelters, and vets with AI-powered matching for responsible pet adoption.`,
+  images: ["/projects/pawfect.jpg"],
+  techStack: "Next.js 15, Node.js, Express.js, MongoDB Atlas, Stripe, DaisyUI, Tailwind CSS",
+  liveLink: "https://pawfect-adoption.vercel.app/",
+  githubclientLink: "https://github.com/ruhanaatiq/pawfect-match",
+  githubserverLink: "",
+  challenges: "Building AI-based pet matching, centralized adoption workflow, secure multi-provider authentication, and Stripe payments.",
+  futurePlans: "Add real-time chat between adopters and shelters, health tracking for adopted pets, and enhanced analytics.",
+},
+  {
     title: "Mini Hive",
     description: `A micro-tasking platform with secure admin panel, worker and buyer management, and real-time coin-based transactions.`,
     images: ["/projects/minihive.png"],
@@ -14,19 +25,7 @@ const projectsData = [
     challenges: "Implementing user authentication, secure admin panel, and efficient data management.",
     futurePlans: "Add payment integration, better UI, and advanced analytics.",
   },
-  {
-    title: "Freelancia",
-    description:
-      "A freelance service marketplace allowing clients to post tasks and developers to bid and work collaboratively.",
-    images: ["/projects/freelancia.png"],
-    techStack: "React, Node.js, Express, MongoDB, Firebase",
-    liveLink: "https://startling-treacle-331744.netlify.app/",
-    githubclientLink: "https://github.com/Kaniz-Naiba/Freelancia.git",
-    githubserverLink: "https://github.com/Kaniz-Naiba/freelancia-server-side.git",
-    challenges:
-      "Booking logic, user authentication, role-based dashboard, and secure form validation.",
-    futurePlans: "Integrate Stripe payment and notifications for task updates.",
-  },
+ 
   {
     title: "ArtiTracker",
     description:
@@ -40,6 +39,19 @@ const projectsData = [
       "Implementing secure artifact updates, user authentication, and clean filtering of items by category or age.",
     futurePlans:
       "Add image upload functionality, QR code-based search, and role-based admin panel.",
+  },
+   {
+    title: "Freelancia",
+    description:
+      "A freelance service marketplace allowing clients to post tasks and developers to bid and work collaboratively.",
+    images: ["/projects/freelancia.png"],
+    techStack: "React, Node.js, Express, MongoDB, Firebase",
+    liveLink: "https://startling-treacle-331744.netlify.app/",
+    githubclientLink: "https://github.com/Kaniz-Naiba/Freelancia.git",
+    githubserverLink: "https://github.com/Kaniz-Naiba/freelancia-server-side.git",
+    challenges:
+      "Booking logic, user authentication, role-based dashboard, and secure form validation.",
+    futurePlans: "Integrate Stripe payment and notifications for task updates.",
   },
 ];
 

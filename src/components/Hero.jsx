@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin,  FaFacebook } from "react-icons/fa";
 // Dynamic Data
 const heroData = {
   name: "Tanbina Kaniz Naiba",
-  role: "MERN Stack Developer",
+  role: "Web Developer",
   intro: "Hi, I’m passionate about building clean and efficient web applications.",
   typewriterWords: ["MERN Stack Developer", "Frontend Enthusiast", "React Lover"],
   socialLinks: [
@@ -15,8 +15,8 @@ const heroData = {
     { icon: <FaLinkedin />, url: "https://linkedin.com/in/Kaniz-Naiba", label: "LinkedIn" },
     { icon: <FaFacebook />, url: "https://www.facebook.com/share/1CUgwXxfa7/", label: "Facebook" },
   ],
-  resumeLink: "/Kaniz-Naiba-Resume.pdf",
-  profileImage: "/projects/naiba.png",
+  resumeLink: "/Tanbina Kaniz Naiba -Web Developer.pdf",
+  profileImage: "/projects/Tanbina Kaniz Naiba Profile.png",
 };
 
 // Particle component (floating small white dots)
@@ -120,7 +120,7 @@ const Hero = () => {
             {/* Resume Download Button */}
            <a
   href={heroData.resumeLink}
-  download="Kaniz-Naiba-Resume.pdf"
+  download="Tanbina Kaniz Naiba -Web Developer.pdf"
   className="px-8 py-3 rounded-full bg-pink-600 text-white 
              hover:bg-pink-700 
              transition transform duration-300 ease-in-out
