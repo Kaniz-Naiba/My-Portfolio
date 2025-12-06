@@ -9,7 +9,7 @@ const AboutMe = () => {
     >
       <h2
         className="text-4xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400"
-        data-aos="fade-up"
+        data-aos="fade"
         data-aos-delay="100"
       >
         About Me
@@ -17,7 +17,7 @@ const AboutMe = () => {
 
       <div
         className="w-full max-w-5xl mx-auto bg-white/20 backdrop-blur-md rounded-3xl shadow-lg p-12 text-center"
-        data-aos="zoom-in"
+        data-aos="zoom"
         data-aos-delay="200"
       >
         <p className="text-lg leading-relaxed max-w-3xl mx-auto text-white/90">

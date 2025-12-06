@@ -24,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 shadow-lg rounded-3xl z-50 text-white">
+    <nav className="fixed top-0 left-0 w-full   rounded-3xl z-50 text-white">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         
 
@@ -34,7 +34,10 @@ const Navbar = () => {
             <li key={name} className="flex items-center space-x-1">
               <a
                 href={`#${id}`}
-                className="hover:text-pink-300 transition-colors duration-300 flex items-center space-x-1"
+              className="px-3 py-1 rounded-full bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 
+hover:opacity-80 transition duration-300 flex items-center space-x-1"
+
+
               >
                 <span className="text-lg">{icon}</span>
                 <span>{name}</span>
@@ -48,7 +51,7 @@ const Navbar = () => {
           <a
             href="/Tanbina Kaniz Naiba -Web Developer.pdf"
             download
-            className="bg-white text-[rgb(185,56,99)] px-4 py-2 rounded hover:bg-pink-300 transition duration-300 font-semibold"
+            className="bg-white text-[rgb(185,56,99)] px-4 py-2 rounded-full hover:bg-pink-300 transition duration-300 font-semibold"
           >
             Download Resume
           </a>
@@ -56,7 +59,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle Button */}
         <div
-          className="md:hidden text-2xl cursor-pointer"
+          className="md:hidden text-3xl cursor-pointer z-50"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -64,29 +67,34 @@ const Navbar = () => {
         </div>
       </div>
 
+ 
+     
       {/* Mobile Menu Items */}
-      {menuOpen && (
-        <div className="md:hidden bg-[rgb(185,56,99)] px-4 pb-4 space-y-3 text-center rounded-b-3xl">
-          {menuItems.map(({ name, icon, id }) => (
-            <a
-              key={name}
-              href={`#${id}`}
-              onClick={() => setMenuOpen(false)}
-              className="block text-white font-medium hover:text-pink-300 transition flex items-center justify-center space-x-2"
-            >
-              <span className="text-lg">{icon}</span>
-              <span>{name}</span>
-            </a>
-          ))}
-          <a
-            href="/Tanbina Kaniz Naiba -Web Developer.pdf"
-            download
-            className="inline-block mt-2 bg-white text-[rgb(185,56,99)] px-4 py-2 rounded hover:bg-pink-300 transition duration-300 font-semibold"
-          >
-            Download Resume
-          </a>
-        </div>
-      )}
+{menuOpen && (
+  <div className="fixed inset-0 bg-black/60 flex flex-col items-center justify-center z-40 space-y-6">
+    {menuItems.map(({ name, icon, id }) => (
+      <a
+        key={name}
+        href={`#${id}`}
+        onClick={() => setMenuOpen(false)}
+        className="px-3 py-2 rounded-full bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400
+        text-white font-semibold text-lg flex items-center space-x-2"
+      >
+        <span className="text-xl">{icon}</span>
+        <span>{name}</span>
+      </a>
+    ))}
+    <a
+      href="/Tanbina Kaniz Naiba -Web Developer.pdf"
+      download
+      className="px-6 py-3 rounded-full bg-white text-[rgb(185,56,99)] font-semibold hover:bg-pink-300 transition"
+    >
+      Download Resume
+    </a>
+  </div>
+)}
+
+
     </nav>
   );
 };

@@ -9,7 +9,7 @@ const Education = () => {
     >
       <h2
         className="text-4xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400"
-        data-aos="fade-up"
+        data-aos="fade"
         data-aos-delay="100"
       >
         Education
@@ -17,7 +17,7 @@ const Education = () => {
 
       <div
         className="w-full max-w-5xl mx-auto bg-white/10 rounded-3xl shadow-lg p-12 text-white text-left"
-        data-aos="zoom-in"
+        data-aos="zoom"
         data-aos-delay="200"
       >
         <div className="space-y-8">

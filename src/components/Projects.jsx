@@ -66,46 +66,85 @@ const Projects = () => {
     >
       <h2
         className="text-3xl sm:text-4xl py-3 font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400"
-        data-aos="fade-up"
-        data-aos-delay={100}
+        data-aos="fade"
+        data-aos-delay={10}
       >
         Projects
       </h2>
 
-      <div className="flex flex-col gap-10 max-w-6xl mx-auto">
-        {projectsData.map((project, idx) => (
-          <div
-            key={idx}
-            className="bg-white/20 backdrop-blur-md border-2 sm:border-4 border-pink-300 rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition flex flex-col sm:flex-row gap-4 sm:gap-6 items-center"
-            data-aos="zoom-in-up"
-            data-aos-delay={idx * 150}
-          >
-            {/* Image */}
-            <div className="w-full sm:w-64 h-48 sm:h-40 flex-shrink-0 rounded overflow-hidden">
-              <img
-                src={project.images[0]}
-                alt={`${project.title} image`}
-                className="w-full h-full object-cover rounded"
-                loading="lazy"
-              />
-            </div>
-
-            {/* Details */}
-            <div className="flex flex-col flex-grow min-w-0 text-white text-center sm:text-left">
-              <h3 className="text-xl sm:text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">
-                {project.title}
-              </h3>
-              <p className="text-white/90 mb-4">{project.description}</p>
-              <button
-                onClick={() => setSelectedProject(project)}
-                className="mx-auto sm:mx-0 bg-gradient-to-r from-pink-600 via-purple-500 to-blue-500 text-white py-2 px-5 rounded shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 text-sm sm:text-base"
-              >
-                View Details
-              </button>
-            </div>
-          </div>
-        ))}
+      {/* Mobile Layout (kept as it was) */}
+<div className="flex flex-col gap-10 max-w-6xl mx-auto md:hidden">
+  {projectsData.map((project, idx) => (
+    <div
+      key={idx}
+      className="bg-white/20 backdrop-blur-md border-2 sm:border-4 border-pink-300 rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition flex flex-col sm:flex-row gap-4 sm:gap-6 items-center"
+      data-aos="fade-in"
+      data-aos-delay={idx * 150}
+    >
+      {/* Image */}
+      <div className="w-full sm:w-64 h-48 sm:h-40 flex-shrink-0 rounded overflow-hidden">
+        <img
+          src={project.images[0]}
+          alt={`${project.title} image`}
+          className="w-full h-full object-cover rounded"
+          loading="lazy"
+        />
       </div>
+
+      {/* Details */}
+      <div className="flex flex-col flex-grow min-w-0 text-white text-center sm:text-left">
+        <h3 className="text-xl sm:text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">
+          {project.title}
+        </h3>
+        <p className="text-white/90 mb-4">{project.description}</p>
+        <button
+          onClick={() => setSelectedProject(project)}
+          className="mx-auto sm:mx-0 bg-gradient-to-r from-pink-600 via-purple-500 to-blue-500 text-white py-2 px-5 rounded shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 text-sm sm:text-base"
+        >
+          View Details
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
+{/* Desktop Layout (side-by-side square cards) */}
+<div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+  {projectsData.map((project, idx) => (
+    <div
+      key={idx}
+      className="bg-white/20 backdrop-blur-md border-2 border-pink-300 rounded-2xl shadow-lg overflow-hidden
+                 hover:shadow-xl hover:scale-105 transition-transform duration-300 flex flex-col max-h-[400px]"
+      data-aos="fade-in"
+      data-aos-delay={idx * 100}
+    >
+      {/* Image */}
+      <div className="w-full h-48 overflow-hidden">
+        <img
+          src={project.images[0]}
+          alt={`${project.title} image`}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Project Info */}
+      <div className="p-4 flex flex-col flex-grow text-center text-white">
+        <h3 className="text-lg sm:text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">
+          {project.title}
+        </h3>
+        <p className="text-white/90 text-sm mb-4 line-clamp-3">{project.description}</p>
+        <button
+          onClick={() => setSelectedProject(project)}
+          className="mx-auto bg-gradient-to-r from-pink-600 via-purple-500 to-blue-500 text-white py-2 px-5 rounded shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 text-sm sm:text-base"
+        >
+          View Details
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
 
       {/* Modal */}
       {selectedProject && (

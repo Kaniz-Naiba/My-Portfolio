@@ -34,7 +34,7 @@ const Contact = () => {
 
       <div
         className="max-w-5xl mx-auto bg-white/20 backdrop-blur-md border-4 border-pink-300 rounded-3xl shadow-lg p-12 text-white"
-        data-aos="zoom-in"
+        data-aos="fade-up"
         data-aos-delay="200"
       >
         <p className="mb-8 text-lg text-center text-white/90">
